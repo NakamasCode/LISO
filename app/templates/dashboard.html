@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+<div class="container-fluid mt-4">
+
+    <!-- HEADER -->
+    <div class="mb-4">
+        <h2>Current & Forecasted Demand</h2>
+        <p class="text-muted">Real-time system overview and projections</p>
+    </div>
+
+
+    <!-- 🔹 TOP SUMMARY -->
+    <section class="mb-5">
+        <div class="row g-4 text-center">
+
+            <div class="col-md-2 col-6">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <i class="bi bi-lightning-charge fs-2 text-primary"></i>
+                    <h6 class="mt-2">Capacity</h6>
+                    <h5 class="fw-bold">44,935 MW</h5>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-6">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <i class="bi bi-graph-up fs-2 text-success"></i>
+                    <h6 class="mt-2">Demand</h6>
+                    <h5 class="fw-bold">23,696 MW</h5>
+                </div>
+            </div>
+
+            <div class="col-md-2 col-6">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <i class="bi bi-battery-charging fs-2 text-warning"></i>
+                    <h6 class="mt-2">Reserves</h6>
+                    <h5 class="fw-bold">2,570 MW</h5>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <i class="bi bi-activity fs-2 text-dark"></i>
+                    <h6 class="mt-2">Today Peak</h6>
+                    <h5 class="fw-bold">28,854 MW</h5>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-6">
+                <div class="p-3 bg-white shadow-sm rounded">
+                    <i class="bi bi-bar-chart fs-2 text-danger"></i>
+                    <h6 class="mt-2">Tomorrow Peak</h6>
+                    <h5 class="fw-bold">27,740 MW</h5>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- 📊 DEMAND TREND -->
+    <section class="mb-5 p-4 bg-white rounded shadow-sm">
+        <h5 class="mb-3">Demand Trend</h5>
+        <canvas id="demandChart"></canvas>
+    </section>
+
+
+    <!-- ⚡ CAPACITY VS DEMAND -->
+    <section class="mb-5 p-4 bg-white rounded shadow-sm">
+        <h5 class="mb-3">Capacity vs Demand</h5>
+        <canvas id="capacityChart"></canvas>
+    </section>
+
+</div>
+
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<script>
+    const ctx1 = document.getElementById('demandChart');
+    new Chart(ctx1, {
+        type: 'line',
+        data: {
+            labels: ['1AM','3AM','6AM','9AM','12PM','3PM','6PM','9PM'],
+            datasets: [{
+                label: 'Demand (MW)',
+                data: [1800,1500,1700,2200,2600,3000,2800,2400],
+                borderWidth: 2,
+                fill: false
+            }]
+        }
+    });
+
+    const ctx2 = document.getElementById('capacityChart');
+    new Chart(ctx2, {
+        type: 'line',
+        data: {
+            labels: ['1AM','3AM','6AM','9AM','12PM','3PM','6PM','9PM'],
+            datasets: [
+                {
+                    label: 'Capacity',
+                    data: [3500,3500,3500,3500,3500,3500,3500,3500],
+                    borderWidth: 2
+                },
+                {
+                    label: 'Demand',
+                    data: [1800,1500,1700,2200,2600,3000,2800,2400],
+                    borderWidth: 2
+                }
+            ]
+        }
+    });
+</script>
+
+{% endblock %}

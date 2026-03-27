@@ -1,0 +1,200 @@
+{% extends "base.html" %}
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-0">
+
+    <!-- HERO -->
+    <section class="text-center py-5 bg-white">
+        <div class="container">
+            <h1 class="mb-3">Lagos Independent System Operator (LISO)</h1>
+            <p class="lead">
+                Delivering real-time visibility into Lagos’ electricity grid, ensuring stability,
+                transparency, and efficient energy distribution across the state. LISO plays a key
+                role in enabling data-driven decision-making across the energy ecosystem while
+                supporting sustainable growth and improved power reliability for homes and businesses.
+            </p>
+        </div>
+    </section>
+
+
+    <!-- GRID STATUS -->
+<section class="py-5" style="background-color: #f5f5f5;">
+    <div class="container">
+        <h3 class="mb-5 text-center">Current Grid Overview</h3>
+
+        <div class="row text-center g-4">
+
+            <!-- GRID STATUS -->
+            <div class="col-md-3 col-6">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-lightning-charge-fill fs-1 text-success"></i>
+                    <h6 class="mt-3">Grid Status</h6>
+                    <span class="badge bg-success fs-6 px-3 py-2">Stable</span>
+                </div>
+            </div>
+
+            <!-- CURRENT DEMAND -->
+            <div class="col-md-3 col-6">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-graph-up-arrow fs-1 text-primary"></i>
+                    <h6 class="mt-3">Current Demand</h6>
+                    <h4 class="fw-bold">2800 MW</h4>
+                </div>
+            </div>
+
+            <!-- CURRENT CAPACITY -->
+            <div class="col-md-3 col-6">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-hdd-stack-fill fs-1 text-dark"></i>
+                    <h6 class="mt-3">Current Capacity</h6>
+                    <h4 class="fw-bold">3500 MW</h4>
+                </div>
+            </div>
+
+            <!-- FORECAST PEAK -->
+            <div class="col-md-3 col-6">
+                <div class="p-4 bg-white rounded shadow-sm h-100">
+                    <i class="bi bi-bar-chart-line-fill fs-1 text-warning"></i>
+                    <h6 class="mt-3">Forecast Peak</h6>
+                    <h4 class="fw-bold">3200 MW</h4>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- DESCRIPTION -->
+        <div class="mt-5 text-center">
+            <p>
+                The grid is currently operating within a stable range, with sufficient available
+                capacity to meet existing demand levels. This ensures operational flexibility and
+                reduces the risk of system stress during peak periods.
+            </p>
+
+            <p>
+                Forecast projections indicate expected demand trends, allowing operators to plan
+                ahead and maintain balance across the network. These indicators provide a clear,
+                real-time snapshot of system performance and reliability.
+            </p>
+
+            <a href="/dashboard" class="btn btn-primary mt-2">View Grid Dashboard</a>
+        </div>
+    </div>
+</section>
+
+
+    <!-- OUTAGES -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- IMAGE -->
+                <div class="col-md-6 text-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1603732551658-5fabbafa84eb"
+                         class="img-fluid rounded shadow"
+                         alt="Power outage">
+                </div>
+
+                <!-- TEXT -->
+                <div class="col-md-6">
+                    <h3 class="mb-3">Outages & System Status</h3>
+
+                    <p>
+                        Power interruptions may occur due to scheduled maintenance activities,
+                        infrastructure upgrades, or unforeseen technical faults within the
+                        transmission and distribution network. LISO ensures that all outages are
+                        monitored and communicated effectively to minimize uncertainty.
+                    </p>
+
+                    <p>
+                        Through real-time updates, stakeholders can access information about affected
+                        locations, outage causes, and estimated restoration timelines. This improves
+                        transparency and allows businesses and individuals to plan accordingly during
+                        service disruptions.
+                    </p>
+
+                    <a href="/outages" class="btn btn-outline-primary">View Outages</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- MARKET -->
+    <section class="py-5" style="background-color: #f5f5f5;">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- TEXT -->
+                <div class="col-md-6">
+                    <h3 class="mb-3">Market, Licenses & Participation</h3>
+
+                    <p>
+                        The Lagos electricity market enables collaboration between generation
+                        companies, distribution companies, regulators, and independent power
+                        producers. LISO plays a central role in coordinating these participants
+                        while ensuring fairness, transparency, and operational efficiency.
+                    </p>
+
+                    <p>
+                        Participants can access licensing frameworks, compliance requirements,
+                        and operational guidelines necessary for entering and operating within
+                        the market. This structured environment supports investment, innovation,
+                        and long-term sustainability of the power sector.
+                    </p>
+
+                    <a href="/market" class="btn btn-outline-primary">Explore Market</a>
+                </div>
+
+                <!-- IMAGE -->
+                <div class="col-md-6 text-center">
+                    <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44"
+                         class="img-fluid rounded shadow"
+                         alt="Energy market">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ABOUT -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- IMAGE -->
+                <div class="col-md-6 text-center mb-3">
+                    <img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6"
+                         class="img-fluid rounded shadow"
+                         alt="Leadership team">
+                </div>
+
+                <!-- TEXT -->
+                <div class="col-md-6">
+                    <h3 class="mb-3">About LISO & Leadership</h3>
+
+                    <p>
+                        The Lagos Independent System Operator is responsible for coordinating
+                        electricity generation, transmission, and distribution activities across
+                        the state. By maintaining a balance between supply and demand, LISO ensures
+                        grid stability and efficient energy delivery.
+                    </p>
+
+                    <p>
+                        The organization is guided by experienced leadership and technical experts
+                        committed to advancing the power sector. Through strategic planning,
+                        operational excellence, and innovation, LISO continues to improve energy
+                        access and reliability for millions of residents.
+                    </p>
+
+                    <a href="/about" class="btn btn-outline-primary">Learn More</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+</div>
+{% endblock %}

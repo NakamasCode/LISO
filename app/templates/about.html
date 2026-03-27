@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+{% block title %}About LISO{% endblock %}
+
+{% block content %}
+<div class="container-fluid px-0">
+
+    <!-- HERO -->
+    <section class="text-center py-5" style="background-color: #f5f5f5;">
+        <div class="container">
+            <h1 class="mb-3">About Lagos Independent System Operator (LISO)</h1>
+            <p class="lead">
+                LISO is committed to ensuring stability, transparency, and efficiency in Lagos' electricity sector. 
+                Our leadership drives operational excellence while promoting fair market participation and sustainable growth.
+            </p>
+        </div>
+    </section>
+
+    <!-- WHO WE ARE -->
+    <section class="py-5" style="background-color: #f5f5f5;">
+        <div class="container">
+            <h3 class="mb-4 text-center">Who We Are</h3>
+            <p class="text-center">
+                LISO coordinates electricity generation, transmission, and distribution in Lagos State, 
+                ensuring a balanced, reliable, and efficient power supply for homes, businesses, and industries. 
+                By leveraging real-time data, LISO enables informed decisions and proactive management of the grid.
+            </p>
+        </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h3 class="mb-4 text-center">Leadership Team</h3>
+            <div class="row g-4">
+
+                <!-- Example Leader -->
+                <div class="col-md-4 text-center">
+                    <img src="https://images.unsplash.com/photo-1603415526960-f8f3b2b9e6e3" 
+                         class="img-fluid rounded-circle mb-3" alt="CEO">
+                    <h5>Engr. Jane Doe</h5>
+                    <p class="text-muted">CEO - Strategic Planning & Operations</p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" 
+                         class="img-fluid rounded-circle mb-3" alt="Technical Director">
+                    <h5>Mr. John Smith</h5>
+                    <p class="text-muted">Technical Director - Grid Operations</p>
+                </div>
+
+                <div class="col-md-4 text-center">
+                    <img src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6" 
+                         class="img-fluid rounded-circle mb-3" alt="Regulatory Head">
+                    <h5>Mrs. Ada Okoro</h5>
+                    <p class="text-muted">Head of Licensing & Compliance</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- LICENSES & MARKET ROLE -->
+    <section class="py-5" style="background-color: #f5f5f5;">
+        <div class="container">
+            <h3 class="mb-4 text-center">Licensing & Market Participation</h3>
+            <p class="text-center">
+                LISO manages licensing frameworks for independent power producers, distribution companies, 
+                and other market participants. We ensure that all stakeholders comply with regulations, 
+                meet operational standards, and contribute to a fair, transparent, and efficient electricity market.
+            </p>
+            <div class="text-center mt-3">
+                <a href="/market" class="btn btn-primary">Explore Market & Licenses</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- VISION & MISSION -->
+    <section class="py-5 bg-white">
+        <div class="container">
+            <h3 class="mb-4 text-center">Vision & Mission</h3>
+            <p class="text-center">
+                <strong>Vision:</strong> A stable, reliable, and transparent electricity grid serving all Lagos residents.<br>
+                <strong>Mission:</strong> To coordinate generation, transmission, and distribution efficiently, 
+                ensuring data-driven decision making and sustainable growth of the power sector.
+            </p>
+        </div>
+    </section>
+
+</div>
+{% endblock %}
